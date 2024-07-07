@@ -3,4 +3,3 @@ gunicorn
 SQLAlchemy
 flask_sqlalchemy
 pymysql
-wsgi
