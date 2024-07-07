@@ -1,0 +1,116 @@
+{% include 'header.html' %}
+<head>
+	<style>
+		body {
+			background-image: url("/static/bg.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		.login-container {
+			background-color: rgba(255, 254, 254, 0.872);
+			padding: 20px;
+			border-radius: 10px;
+			max-width: 400px;
+			width: 100%;
+			max-height:400px
+			height:100%;
+			margin: 0 auto;
+		}
+
+		form {
+			padding: 20px;
+			border-radius: 10px;
+			margin-top:30px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border: 1px solid #fffefe;
+			width:55%;
+			height:91%;
+			background-color: rgba(255, 255, 255, 0.199);
+		}
+		h2 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.form-group label {
+			font-weight: bold;
+		}
+
+		.form-group input {
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0 20px 0;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.btn {
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #007bff;
+			color: white;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.btn:hover {
+			background-color: #00b324;
+		}
+
+		.bottom {
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.bottom a {
+			color: #007bff;
+			text-decoration: none;
+		}
+
+		.bottom a:hover {
+			text-decoration: underline;
+		}
+
+	</style>
+</head>
+<body>
+  <div class="container-fluid" id="main">
+  {% include 'top_menus.html' %}  	
+    <div class="row row-offcanvas row-offcanvas-left">      
+      <div class="col-md-9 col-lg-10 main"> 
+	<h2></h2>
+	<form action="{{ url_for('register') }}" method="post">
+		<h2>User Registration</h2>
+        {% if mesage is defined and mesage %}
+			<div class="alert alert-warning">{{ mesage }}</div>
+		{% endif %}
+		<div class="form-group">
+			<label for="name">Name:</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Enter name" name="name">
+		</div>
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" name="email">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Password:</label>
+			<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" name="pswd">
+		</div>    
+		<button type="submit" class="btn btn-primary">Register</button>
+		<p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Login here</a></p>
+	</form>      
+       </div>       
+      </div>     
+    </div>
+  </body>
+</html>

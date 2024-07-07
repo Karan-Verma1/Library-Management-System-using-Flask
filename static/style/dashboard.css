@@ -1,0 +1,81 @@
+/* dashboard.css */
+body {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f9f9f9; /* add a light gray background color */
+  background-image: url("/static/bg.jpg");
+  background-repeat: no-repeat;
+  background-position:initial;
+  background-size:cover;
+}
+
+header {
+  background-color: #333; /* add a dark gray background color to the header */
+  padding: 20px; /* add some padding to the header */
+  color: #fff; /* set the text color to white */
+}
+
+.row-offcanvas {
+  position: relative;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+/* add some styling to the cards */
+.card {
+  overflow: hidden;
+  border: 1px solid #ddd; /* add a border to the cards */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow to the cards */
+  transition: all 0.3s ease-out; /* add a transition effect to the cards */
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* add a hover effect to the cards */
+  transform: translateY(-5px); /* add a subtle animation to the cards */
+}
+
+.card-block {
+  padding: 20px; /* add some padding to the card block */
+}
+
+.card-block .rotate {
+  z-index: 8;
+  float: right;
+  height: 100%;
+}
+
+.card-block .rotate i {
+  color: rgba(20, 20, 20, 0.15);
+  position: absolute;
+  left: 0;
+  left: auto;
+  right: -10px;
+  bottom: 0;
+  display: block;
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+  -ms-transform: rotate(-44deg);
+  transform: rotate(-44deg);
+}
+
+.display-1 a {
+  text-decoration: none;
+  color: #337ab7; /* add a blue color to the links */
+  transition: all 0.3s ease-out; /* add a transition effect to the links */
+}
+
+.display-1 a:hover {
+  color: #23527c; /* add a hover effect to the links */
+}
+
+.leftMenus a {
+  font-size: 16px;
+  color: #03060a;
+  transition: all 0.3s ease-out; /* add a transition effect to the links */
+}
+
+.leftMenus a:hover {
+  color: #03080c; /* add a hover effect to the links */
+}
